@@ -5,6 +5,9 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>common-hotel</module>
+		<module>hotel-service</module>
+		<module>room-service</module>
+		<module>reservation-service</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

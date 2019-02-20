@@ -20,4 +20,9 @@ public class HotelDaoTest extends MysqlSetup {
     public void findsAllHotels() {
         assertThat(hotelDao.findAll().size()).isEqualTo(8);
     }
+
+    @Test
+    public void findsHotelsInRome() {
+        assertThat(hotelDao.findByPartialAddress("Rome").size()).isEqualTo(3);
+    }
 }
