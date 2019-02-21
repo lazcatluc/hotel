@@ -1,6 +1,5 @@
 package com.example.hotel;
 
-import com.example.hotel.dao.RoomDao;
 import com.example.hotel.model.Room;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

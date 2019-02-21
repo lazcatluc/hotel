@@ -1,10 +1,9 @@
-package com.example.hotel.dao;
+package com.example.hotel;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import com.example.hotel.MysqlSetup;
 import com.example.hotel.model.Hotel;
 import com.example.hotel.model.RoomTypes;
 import org.junit.Test;

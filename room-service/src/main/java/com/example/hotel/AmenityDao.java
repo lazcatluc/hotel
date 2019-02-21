@@ -1,4 +1,4 @@
-package com.example.hotel.dao;
+package com.example.hotel;
 
 import com.example.hotel.model.Amenity;
 

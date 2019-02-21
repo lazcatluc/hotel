@@ -1,9 +1,6 @@
 package com.example.hotel;
 
 import java.time.LocalDate;
-import com.example.hotel.dao.HotelDao;
-import com.example.hotel.dao.ReservationDao;
-import com.example.hotel.dao.RoomTypesDao;
 import com.example.hotel.model.Hotel;
 import com.example.hotel.model.Reservation;
 import com.example.hotel.model.RoomTypes;

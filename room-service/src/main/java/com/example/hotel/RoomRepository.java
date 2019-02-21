@@ -1,7 +1,6 @@
-package com.example.hotel.hql;
+package com.example.hotel;
 
 import java.util.Optional;
-import com.example.hotel.dao.RoomDao;
 import com.example.hotel.model.Room;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

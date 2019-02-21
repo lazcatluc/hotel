@@ -1,8 +1,7 @@
-package com.example.hotel.dao;
+package com.example.hotel;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.example.hotel.MysqlSetup;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
