@@ -9,7 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name = "reservations")
@@ -22,8 +21,6 @@ public class Reservation {
     private LocalDate from;
     @Column(name = "to_date")
     private LocalDate to;
-    @Transient
-    private long roomId;
 
     @ManyToOne
     @JoinColumn(name = "room_id")
@@ -60,14 +57,6 @@ public class Reservation {
 
     public void setTo(LocalDate to) {
         this.to = to;
-    }
-
-    public long getRoomId() {
-        return roomId;
-    }
-
-    public void setRoomId(long roomId) {
-        this.roomId = roomId;
     }
 
     public Room getRoom() {
