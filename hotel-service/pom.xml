@@ -15,11 +15,6 @@
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>common-hotel</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>common-hotel</artifactId>
             <classifier>tests</classifier>
             <version>${project.parent.version}</version>
             <scope>test</scope>
