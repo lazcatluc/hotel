@@ -1,6 +1,6 @@
 package com.example.hotel.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 @Entity
@@ -20,12 +18,10 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String guest;
-    @Temporal(TemporalType.DATE)
     @Column(name = "from_date")
-    private Date from;
-    @Temporal(TemporalType.DATE)
+    private LocalDate from;
     @Column(name = "to_date")
-    private Date to;
+    private LocalDate to;
     @Transient
     private long roomId;
 
@@ -50,19 +46,19 @@ public class Reservation {
         this.guest = guest;
     }
 
-    public Date getFrom() {
+    public LocalDate getFrom() {
         return from;
     }
 
-    public void setFrom(Date from) {
+    public void setFrom(LocalDate from) {
         this.from = from;
     }
 
-    public Date getTo() {
+    public LocalDate getTo() {
         return to;
     }
 
-    public void setTo(Date to) {
+    public void setTo(LocalDate to) {
         this.to = to;
     }
 
