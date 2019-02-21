@@ -10,11 +10,9 @@ import com.wix.mysql.config.MysqldConfig;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = CommonHotelConfiguration.class)
 public class MysqlSetup {
 
     private static EmbeddedMysql mysqld;
@@ -27,7 +25,7 @@ public class MysqlSetup {
                 .build();
 
         mysqld = anEmbeddedMysql(config)
-                .addSchema("rdbms", Sources.fromURL(CommonHotelConfigurationTests.class
+                .addSchema("rdbms", Sources.fromURL(MysqlSetup.class
                         .getResource("/init.sql")))
                 .start();
     }
