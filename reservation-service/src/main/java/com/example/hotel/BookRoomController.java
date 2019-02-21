@@ -1,9 +1,6 @@
 package com.example.hotel;
 
 import java.time.LocalDate;
-import com.example.hotel.model.Hotel;
-import com.example.hotel.model.Reservation;
-import com.example.hotel.model.RoomTypes;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,14 +1,11 @@
-package com.example.hotel.model;
+package com.example.hotel;
 
 import java.util.List;
-import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -34,15 +31,6 @@ public class Room {
 
     private double price;
     private int floor;
-    @ManyToMany
-    @JoinTable(name = "room_amenities",
-            joinColumns = {
-                    @JoinColumn(name = "room_id")
-            },
-            inverseJoinColumns = {
-                    @JoinColumn(name = "amenity_id")
-            })
-    private List<Amenity> amenities;
 
     @OneToMany(mappedBy = "room")
     @JsonIgnore
@@ -98,14 +86,6 @@ public class Room {
         this.hotel = hotel;
     }
 
-    public List<Amenity> getAmenities() {
-        return amenities;
-    }
-
-    public void setAmenities(List<Amenity> amenities) {
-        this.amenities = amenities;
-    }
-
     public List<Reservation> getReservations() {
         return reservations;
     }
@@ -124,16 +104,7 @@ public class Room {
         sb.append(", hotel=").append(hotel);
         sb.append(", price=").append(price);
         sb.append(", floor=").append(floor);
-        sb.append(", amenities=").append(amenities);
         sb.append('}');
         return sb.toString();
-    }
-
-    public void addAmenity(Amenity amenity) {
-        amenities.add(amenity);
-    }
-
-    public void removeAmenity(String amenity) {
-        amenities.removeIf(a -> Objects.equals(a.getName(), amenity));
     }
 }

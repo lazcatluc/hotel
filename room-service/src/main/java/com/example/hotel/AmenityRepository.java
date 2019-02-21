@@ -1,7 +1,6 @@
 package com.example.hotel;
 
 import java.util.Optional;
-import com.example.hotel.model.Amenity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 interface AmenityRepository extends AmenityDao, JpaRepository<Amenity, Long> {

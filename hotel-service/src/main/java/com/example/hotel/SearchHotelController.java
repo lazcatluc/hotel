@@ -1,7 +1,6 @@
 package com.example.hotel;
 
 import java.util.List;
-import com.example.hotel.model.Hotel;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

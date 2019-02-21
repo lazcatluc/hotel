@@ -1,4 +1,4 @@
-package com.example.hotel.model;
+package com.example.hotel;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,19 +6,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "amenities")
 @Entity
-public class Amenity {
+@Table(name = "hotels")
+public class Hotel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String name;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -30,9 +30,10 @@ public class Amenity {
         this.name = name;
     }
 
+
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Amenity{");
+        final StringBuilder sb = new StringBuilder("Hotel{");
         sb.append("id=").append(id);
         sb.append(", name='").append(name).append('\'');
         sb.append('}');

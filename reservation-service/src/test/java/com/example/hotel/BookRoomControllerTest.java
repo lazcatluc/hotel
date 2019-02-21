@@ -2,7 +2,6 @@ package com.example.hotel;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.example.hotel.model.Reservation;
 import org.junit.After;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.example.hotel.model;
+package com.example.hotel;
 
 import java.util.List;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "hotels")
@@ -19,13 +19,12 @@ public class Hotel {
     private long id;
     private String name;
     private int stars;
-    @Transient
-    private Long addressId;
     @OneToOne
     @JoinColumn(name = "address_id")
     private Address address;
 
     @OneToMany(mappedBy = "hotel")
+    @JsonIgnore
     private List<Room> rooms;
 
     public long getId() {
@@ -52,14 +51,6 @@ public class Hotel {
         this.stars = stars;
     }
 
-    public Long getAddressId() {
-        return addressId;
-    }
-
-    public void setAddressId(Long addressId) {
-        this.addressId = addressId;
-    }
-
     public Address getAddress() {
         return address;
     }
@@ -68,13 +59,20 @@ public class Hotel {
         this.address = address;
     }
 
+    public List<Room> getRooms() {
+        return rooms;
+    }
+
+    public void setRooms(List<Room> rooms) {
+        this.rooms = rooms;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Hotel{");
         sb.append("id=").append(id);
         sb.append(", name='").append(name).append('\'');
         sb.append(", stars=").append(stars);
-        sb.append(", addressId=").append(addressId);
         sb.append(", address=").append(address);
         sb.append('}');
         return sb.toString();

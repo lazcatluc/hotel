@@ -1,4 +1,4 @@
-package com.example.hotel.model;
+package com.example.hotel;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

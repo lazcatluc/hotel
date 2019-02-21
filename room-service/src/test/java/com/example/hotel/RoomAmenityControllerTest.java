@@ -2,8 +2,6 @@ package com.example.hotel;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.example.hotel.model.Amenity;
-import com.example.hotel.model.Room;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
