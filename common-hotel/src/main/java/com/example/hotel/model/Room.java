@@ -1,6 +1,7 @@
 package com.example.hotel.model;
 
 import java.util.List;
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -126,5 +127,13 @@ public class Room {
         sb.append(", amenities=").append(amenities);
         sb.append('}');
         return sb.toString();
+    }
+
+    public void addAmenity(Amenity amenity) {
+        amenities.add(amenity);
+    }
+
+    public void removeAmenity(String amenity) {
+        amenities.removeIf(a -> Objects.equals(a.getName(), amenity));
     }
 }
