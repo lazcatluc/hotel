@@ -11,16 +11,6 @@
 
     <artifactId>reservation-service</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>common-hotel</artifactId>
-            <classifier>tests</classifier>
-            <version>${project.parent.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
     <build>
         <plugins>
             <plugin>
